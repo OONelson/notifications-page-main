@@ -1,0 +1,401 @@
+:root {
+	//Colors
+
+	//Primary
+
+	--Red: hsl(1, 90%, 64%);
+	--Blue: hsl(219, 85%, 26%);
+
+	//Neutral
+
+	--White: hsl(0, 0%, 100%);
+	--Very-light-grayish-blue: hsl(210, 60%, 98%);
+	--Light-grayish-blue-1: hsl(211, 68%, 94%);
+	--Light-grayish-blue-2: hsl(205, 33%, 90%);
+	--Grayish-blue: hsl(219, 14%, 63%);
+	--Dark-grayish-blue: hsl(219, 12%, 42%);
+	--Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*,
+::before,
+::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--Light-grayish-blue-2);
+	overflow: hidden;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.container {
+	height: max-content;
+	width: 55rem;
+	background-color: var(--White);
+	padding: 2rem 3rem;
+	@media only screen and (max-width: 23.4375em) {
+		width: 45rem;
+		padding: 2rem;
+	}
+	&__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&--h1 {
+			padding-bottom: 0.5rem;
+			font-size: 2.2rem;
+			font-weight: 800;
+			color: var(--Very-dark-blue);
+		}
+		&--span {
+			margin-left: 2rem;
+			padding: 0 1rem;
+			background-color: var(--Blue);
+			color: var(--White);
+			font-weight: 800;
+			font-size: 1.5rem;
+			border-radius: 5px;
+		}
+		&--p {
+			font-weight: 800;
+			font-size: 1.1rem;
+			color: var(--Dark-grayish-blue);
+			&:hover {
+				cursor: pointer;
+				color: var(--Blue);
+			}
+		}
+	}
+	&__main {
+		padding: 1rem 0;
+	}
+
+	%bar {
+		margin-bottom: 0.5rem;
+		// max-width: 60rem;
+		width: 100%;
+		padding: 0.2rem 0.5rem;
+		border-radius: 5px;
+		position: relative;
+		@media only screen and (max-width: 23.4375em) {
+			// padding: 0.5rem;
+			margin-bottom: 1rem;
+		}
+		%userpic {
+			height: 4rem;
+			width: 4rem;
+			
+		}
+		%paragraph {
+			font-size: 1.1rem;
+			color: var(--Dark-grayish-blue);
+		}
+		%span-name {
+			color: var(--Very-dark-blue);
+			font-weight: 800;
+			&:hover {
+				cursor: pointer;
+				color: var(--Blue);
+			}
+		}
+		%span-post {
+			color: var(--Dark-grayish-blue);
+			font-weight: 800;
+			&:hover {
+				cursor: pointer;
+				color: var(--Blue);
+			}
+		}
+		%time {
+			position: absolute;
+			top: 60%;
+			left: 10%;
+			width: 8rem;
+			color: var(--Grayish-blue);
+			font-weight: 500;
+			@media only screen and (max-width: 23.4375em) {
+				padding: 0;
+				height: 1rem;
+				left: 15%;
+			}
+		}
+	}
+
+	&__barone {
+		@extend %bar;
+		background-color: var(--Light-grayish-blue-1);
+		@media only screen and (max-width: 23.4375em) {
+			height: 6rem;
+		}
+		&--userpic {
+			@extend %userpic;
+			@media only screen and (max-width: 23.4375em) {
+				margin-top: -2rem;
+			}
+		}
+		&--paragraph {
+			@extend %paragraph;
+		}
+		&--span-name {
+			@extend %span-name;
+		}
+		&--span-post {
+			@extend %span-post;
+		}
+		&--time {
+			@extend %time;
+		}
+	}
+
+	&__bartwo {
+		@extend %bar;
+		background-color: var(--Light-grayish-blue-1);
+		@media only screen and (max-width: 23.4375em) {
+			height: 6rem;
+		}
+		&--userpic {
+			@extend %userpic;
+			@media only screen and (max-width: 23.4375em) {
+				margin-top: -2rem;
+			}
+		}
+		&--paragraph {
+			@extend %paragraph;
+		}
+		&--span-name {
+			@extend %span-name;
+		}
+
+		&--time {
+			@extend %time;
+		}
+	}
+
+	&__barthree {
+		@extend %bar;
+		background-color: var(--Light-grayish-blue-1);
+		@media only screen and (max-width: 23.4375em) {
+			height: 6rem;
+		}
+		&--userpic {
+			@extend %userpic;
+			@media only screen and (max-width: 23.4375em) {
+				margin-top: -2rem;
+			}
+		}
+		&--paragraph {
+			@extend %paragraph;
+		}
+		&--span-name {
+			@extend %span-name;
+		}
+		&--span-post {
+			@extend %span-post;
+		}
+		&--time {
+			@extend %time;
+		}
+	}
+
+	&__barfour {
+		@extend %bar;
+		background-color: var(--Very-light-grayish-blue);
+		@media only screen and (max-width: 23.4375em) {
+			height: 14rem;
+		}
+		&--userpic {
+			@extend %userpic;
+			@media only screen and (max-width: 23.4375em) {
+				margin-top: -9rem;
+			}
+		}
+		&--paragraph {
+			@extend %paragraph;
+		}
+		&--span-name {
+			@extend %span-name;
+		}
+		&--span-post {
+			@extend %span-post;
+		}
+		&--time {
+			position: absolute;
+			top: -7rem;
+			left: 9%;
+			width: 5rem;
+			display: inline;
+			color: var(--Grayish-blue);
+			font-weight: 500;
+			@media only screen and (max-width: 23.4375em) {
+				top: -21rem;
+				left: 13%;
+				z-index: 11;
+			}
+		}
+		&--message-container {
+			display: block;
+			border: 1px solid var(--Grayish-blue);
+			width: 20rem;
+			margin-left: 5rem;
+			max-width: 35rem;
+			width: 100%;
+			&:hover {
+				cursor: pointer;
+				background-color: var(--Light-grayish-blue-1);
+				border: none;
+			}
+			@media only screen and (max-width: 23.4375em) {
+				position: absolute;
+				top: -75%;
+				max-width: 20rem;
+				width: 100%;
+				z-index: 10;
+				height: 7.5rem;
+				padding: .5rem 1rem;
+
+			}
+		}
+		&--message {
+			font-size: 1.1rem;
+			max-width: 35rem;
+			width: 100%;
+			color: var(--Dark-grayish-blue);
+			transition: all 0.3s ease;
+			&:hover {
+				cursor: pointer;
+				background-color: var(--Light-grayish-blue-1);
+			}
+			@media only screen and (max-width: 23.4375em) {
+				width: 70%;
+				height: 5rem;
+			}
+		}
+	}
+
+	&__barfive {
+		@extend %bar;
+		background-color: var(--Very-light-grayish-blue);
+		@media only screen and (max-width: 23.4375em) {
+			height: 6rem;
+		}
+		&--userpic {
+			@extend %userpic;
+		}
+		&--paragraph {
+			@extend %paragraph;
+		}
+		&--span-name {
+			@extend %span-name;
+		}
+		&--span-post {
+			@extend %span-post;
+		}
+		&--time {
+			@extend %time;
+		}
+	}
+
+	&__barsix {
+		@extend %bar;
+		background-color: var(--Very-light-grayish-blue);
+		height: 6rem;
+		@media only screen and (max-width: 23.4375em) {
+			height: 6rem;
+		}
+		&--userpic {
+			@extend %userpic;
+		}
+		&--paragraph {
+			@extend %paragraph;
+		}
+		&--span-name {
+			@extend %span-name;
+		}
+		&--span-post {
+			@extend %span-post;
+		}
+		&--time {
+			@extend %time;
+		}
+	}
+
+	&__barseven {
+		@extend %bar;
+		background-color: var(--Very-light-grayish-blue);
+		@media only screen and (max-width: 23.4375em) {
+			height: 6rem;
+		}
+		&--userpic {
+			@extend %userpic;
+		}
+		&--paragraph {
+			@extend %paragraph;
+		}
+		&--span-name {
+			@extend %span-name;
+		}
+		&--span-post {
+			@extend %span-post;
+		}
+		&--time {
+			@extend %time;
+		}
+	}
+}
+
+%red {
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	margin-left: 1rem;
+	background-color: var(--Red);
+	position: absolute;
+	top: 39.5%;
+}
+
+.red {
+	@extend %red;
+	right: 10%;
+	@media only screen and (max-width: 23.4375em) {
+		right: 46%;
+	}
+}
+.redd {
+	@extend %red;
+	right: 56%;
+	@media only screen and (max-width: 23.4375em) {
+		top: 12%;
+		right: 35%;
+	}
+}
+.reddd {
+	@extend %red;
+	right: 25%;
+	@media only screen and (max-width: 23.4375em) {
+		left: 21%;
+	}
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.off{
+	background-color:var(--Very-light-grayish-blue) ;
+}
+
+.active{
+	display: none;
+}
