@@ -36,3 +36,15 @@ Users should be able to:
 
 
 ### Links
+
+https://oonelson.github.io/notifications-page-main/
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- Flexbox
+- SCSS
+- desktop-first workflow
+
